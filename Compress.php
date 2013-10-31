@@ -33,5 +33,6 @@ class Compress{
         }
         return $res;
     }
+
 }
 ?>
