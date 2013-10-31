@@ -3,5 +3,7 @@ return array(
     'qwe',
     'asd',
     'zxc',
-    'yyy'
+    'yyy',
+    5,
+    '4234'
 );
