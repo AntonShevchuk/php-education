@@ -2,5 +2,6 @@
 return array(
     'qwe',
     'asd',
-    'zxc'
+    'zxc',
+    'yyy'
 );
