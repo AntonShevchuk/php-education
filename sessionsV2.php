@@ -1,4 +1,5 @@
 <?php
+echo session_save_path();
 session_start();
 $_SESSION['id']=42;
 $_SESSION['qwe;qwe']=array(1=>"fdgsg",array('asd','bda'),'xzxczxc');
@@ -53,7 +54,7 @@ echo '<hr>FILE<br>-------------<br>';
 $file=$_COOKIE['PHPSESSID'];
 
 //Custom path to session file
-$data = file_get_contents('C:\php\tmp\sess_'.$file.'.txt');
+$data = file_get_contents(session_save_path().'/sess_'.$_COOKIE['PHPSESSID']);
 print_r($data);
 
 
