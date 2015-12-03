@@ -67,4 +67,3 @@ if ($file) {
     $result = array_map('unserialize', $result);
     var_dump($result);
 }
-

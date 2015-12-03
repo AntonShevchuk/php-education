@@ -20,4 +20,3 @@ function shutdown() {
 register_shutdown_function('shutdown');
 
 require_once 'error.php';
- 

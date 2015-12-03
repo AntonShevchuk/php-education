@@ -24,12 +24,12 @@ echo '</pre>';
 
 echo '<ol>';
 for ($i = 0; $i < 10; $i++) {
-    include_once 'template.php';
+    include_once 'require.template.php';
 }
 echo '</ol>';
 echo '<hr/>';
 echo '<ol>';
 for ($i = 0; $i < 10; $i++) {
-    include 'template.php';
+    include 'require.template.php';
 }
 echo '</ol>';
