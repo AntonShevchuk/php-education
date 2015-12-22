@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+    # check size
+	RewriteCond %{REQUEST_FILENAME} -s [OR]
+	# check link
+	RewriteCond %{REQUEST_FILENAME} -l [OR]
+	# check directory
+	RewriteCond %{REQUEST_FILENAME} -d
+	# as is
+	RewriteRule ^.*$ - [NC,L]
+
+	# one input point
+	RewriteRule ^.*$ rewrite.php [NC,L]
+</IfModule>

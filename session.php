@@ -16,9 +16,7 @@ $object->arr = array('hello', 'world');
 $_SESSION['object var'] = $object;
 $_SESSION['integer again'] = 42;
 
-echo '<pre>';
 var_dump($_SESSION);
-echo '</pre>';
 
 $name = ini_get('session.name');
 
@@ -27,14 +25,9 @@ $file = isset($_COOKIE[$name])?$_COOKIE[$name]:null;
 if ($file) {
     $path = ini_get('session.save_path');
     $data = file_get_contents($path.'/sess_'.$file);
-    echo '<hr/>';
-    echo '<pre>';
     var_dump($data);
-    echo '</pre>';
-
 
     $arr = preg_split('/\|/',$data);
-    echo '<pre>';
     var_dump($arr);
 
     $session_value = array();
@@ -67,4 +60,3 @@ if ($file) {
     $result = array_map('unserialize', $result);
     var_dump($result);
 }
-
