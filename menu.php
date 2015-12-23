@@ -14,6 +14,9 @@
     <a href="display.php?file=rewrite">Rewrite Apache Module</a>
 </li>
 <li>
+    <a href="shutdown.php">Shutdown function</a>
+</li>
+<li>
     <a href="display.php?file=session.start">Session for begginers</a>
 </li>
 <li>
@@ -21,7 +24,4 @@
 </li>
 <li>
     <a href="display.php?file=session.custom">Custom session</a>
-</li>
-<li>
-    <a href="display.php?file=shutdown">Shutdown function</a>
 </li>
