@@ -15,7 +15,7 @@
 <div class="jumbotron">
     <div class="container">
     <h1>PHP Education Program</h1>
-    <p>Live examples for course</p>
+    <p>Live examples for courses</p>
     <p>
         <a class="btn btn-success btn-lg" href="https://github.com/AntonShevchuk/php-education" role="button">
             <span class="fa fa-github"></span>
