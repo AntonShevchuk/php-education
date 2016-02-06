@@ -13,7 +13,6 @@ if ($_SESSION['ua'] != $_SERVER['HTTP_USER_AGENT']) {
     /**
      * @link http://php.net/function.session-destroy
      */
-
     if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();
         setcookie(session_name(), '', time() - 42000,
