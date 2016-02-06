@@ -6,5 +6,8 @@ require_once 'include/sess.php';
 
 sess_start();
 
-echo $_SESS["id"];
-$_SESS["id"] = 42;
+if (isset($_SESS["id"])) {
+    echo $_SESS["id"];
+} else {
+    $_SESS["id"] = 42;
+}

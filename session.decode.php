@@ -13,6 +13,7 @@ $_SESSION['array var'] = array('one', 'two', [1,2,3]);
 $object = new stdClass();
 $object->foo = 'bar';
 $object->arr = array('hello', 'world');
+
 $_SESSION['object var'] = $object;
 $_SESSION['integer again'] = 42;
 
