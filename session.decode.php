@@ -17,6 +17,8 @@ $object->arr = array('hello', 'world');
 $_SESSION['object var'] = $object;
 $_SESSION['integer again'] = 42;
 
+echo '<pre>';
+echo '<h2>Session data</h2>';
 var_dump($_SESSION);
 
 $name = ini_get('session.name');
@@ -25,9 +27,17 @@ $file = isset($_COOKIE[$name])?$_COOKIE[$name]:null;
 
 if ($file) {
     $path = ini_get('session.save_path');
+
+    if (empty($path)) {
+        $path = sys_get_temp_dir();
+    }
+
     $data = file_get_contents($path.'/sess_'.$file);
+
+    echo '<h2>File content</h2>';
     var_dump($data);
 
+    echo '<h2>Split by pipe</h2>';
     $arr = preg_split('/\|/',$data);
     var_dump($arr);
 
@@ -36,7 +46,7 @@ if ($file) {
     $session_key[] = array_shift($arr);
     $session_value[sizeof($arr)-1] = array_pop($arr);
 
-    for ($i=0;$i<count($arr);$i++){
+    for ($i=0; $i<count($arr); $i++){
         if (strpos($arr[$i],'i:') === 0 || strpos($arr[$i],'d:') === 0 ) {
             $mass = explode(';', $arr[$i], 2);
             $session_key[] = $mass[1];
@@ -54,10 +64,15 @@ if ($file) {
     }
     ksort($session_value);
 
-    var_dump($session_value);
+    echo '<h2>Keys</h2>';
     var_dump($session_key);
+    echo '<h2>Values</h2>';
+    var_dump($session_value);
 
     $result = array_combine($session_key, $session_value);
     $result = array_map('unserialize', $result);
+    echo '<h2>Result</h2>';
     var_dump($result);
 }
+
+echo '</pre>';
