@@ -11,9 +11,14 @@ function shutdown() {
         while (ob_get_level()) {
             ob_end_clean();
         }
-        echo "Sorry, some error in your code:<br/><pre>";
+        include 'include/header.php';
+        echo '<div class="container">';
+        echo '<h1>Sorry, we found error in your code</h1>';
+        echo "<pre>";
         var_dump($error);
         echo "</pre>";
+        echo "</div>";
+        include 'include/footer.php';
     }
 }
 

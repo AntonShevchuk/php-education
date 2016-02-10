@@ -34,7 +34,7 @@
     Output Buffer
     <ul>
         <li>
-            <a href="display.php?file=buffer">Start() and End()</a>
+            <a href="display.php?file=buffer">Start and End</a>
         </li>
         <li>
             <a href="flush.php">Flush It!</a>
