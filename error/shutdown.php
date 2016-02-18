@@ -22,6 +22,6 @@ function shutdown() {
     }
 }
 
-//register_shutdown_function('shutdown');
+register_shutdown_function('shutdown');
 
 require_once 'e_parse.php';
