@@ -8,25 +8,22 @@
     <a href="display.php?file=rewrite">Rewrite Apache Module</a>
 </li>
 <li>
-    <a href="shutdown.php">Shutdown function</a>
-</li>
-<li>
     Session for begginers
     <ul>
         <li>
-            <a href="display.php?file=session.start">Start the session</a>
+            <a href="display.php?file=session/start">Start the session</a>
         </li>
         <li>
-            <a href="display.php?file=session.decode">Decode session file</a>
+            <a href="display.php?file=session/decode">Decode session file</a>
         </li>
         <li>
-            <a href="display.php?file=session.error">Session error</a>
+            <a href="display.php?file=session/error">Session error</a>
         </li>
         <li>
-            <a href="display.php?file=session.handler">Custom handler</a>
+            <a href="display.php?file=session/handler">Custom handler</a>
         </li>
         <li>
-            <a href="display.php?file=session.custom">Custom session</a>
+            <a href="display.php?file=session/custom">Custom session</a>
         </li>
     </ul>
 </li>
@@ -38,6 +35,18 @@
         </li>
         <li>
             <a href="flush.php">Flush It!</a>
+        </li>
+    </ul>
+</li>
+<li>
+    Error handling
+    <ul>
+        <li>
+            <a href="error/e_parse.php">E_PARSE</a>,
+            <a href="error/e_error.php">E_ERROR</a>
+        </li>
+        <li>
+            <a href="error/shutdown.php">Shutdown function</a>
         </li>
     </ul>
 </li>

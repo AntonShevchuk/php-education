@@ -20,7 +20,7 @@
         </div>
         <div class="panel-body lead">
             <ul class="list-unstyled">
-                <?php include 'menu.php'; ?>
+                <?php include 'include/menu.php'; ?>
             </ul>
         </div>
     </div>

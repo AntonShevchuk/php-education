@@ -1,6 +1,6 @@
 <?php
 // session store directory
-$GLOBALS['_SESS_DIR'] = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'sess' . DIRECTORY_SEPARATOR;
+$GLOBALS['_SESS_DIR'] = __DIR__ . DIRECTORY_SEPARATOR . 'sess' . DIRECTORY_SEPARATOR;
 
 // check writable
 if (!is_writable($GLOBALS['_SESS_DIR'])) {
@@ -38,7 +38,7 @@ function sess_id($id = null) {
 
     if ($id) {
         $sess_id = $id;
-        setcookie('PHPSESS', $sess_id);
+        setcookie('PHPSESS', $sess_id, null, null, null, null, true);
     }
 
     if ($sess_id) {

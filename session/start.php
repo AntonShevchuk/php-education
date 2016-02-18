@@ -8,7 +8,6 @@ $userAgent = $_SERVER['HTTP_USER_AGENT'];
 $userIp = $_SERVER['REMOTE_ADDR'];
 $userIpBehindProxy = isset($_SERVER['HTTP_X_FORWARDED_FOR'])?$_SERVER['HTTP_X_FORWARDED_FOR']:'';
 
-
 if (!isset($_SESSION['time'])) {
     $_SESSION['ua'] = $userAgent;
     $_SESSION['ip'] = $userIp;

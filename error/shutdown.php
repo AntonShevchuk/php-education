@@ -11,17 +11,17 @@ function shutdown() {
         while (ob_get_level()) {
             ob_end_clean();
         }
-        include 'include/header.php';
+        include dirname(__DIR__) .'/include/header.php';
         echo '<div class="container">';
         echo '<h1>Sorry, we found error in your code</h1>';
         echo "<pre>";
         var_dump($error);
         echo "</pre>";
         echo "</div>";
-        include 'include/footer.php';
+        include dirname(__DIR__) .'/include/footer.php';
     }
 }
 
-register_shutdown_function('shutdown');
+//register_shutdown_function('shutdown');
 
-require_once 'include/error.php';
+require_once 'e_parse.php';
