@@ -10,6 +10,6 @@ namespace Education\Exception;
  * @package  Education\Exception
  * @author   Anton Shevchuk
  */
-class CommandException extends \Exception
+class EducationException extends \Exception
 {
 }

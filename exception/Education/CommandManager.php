@@ -24,19 +24,21 @@ class CommandManager
      */
     public function __construct()
     {
-        if (!is_dir($this->cmdDir)) {
+        if (!is_dir(__DIR__ . DIRECTORY_SEPARATOR . $this->cmdDir)) {
             throw new CommandManagerException("Is not directory `$this->cmdDir`");
         }
     }
 
     /**
      * @param string $cmd
-     * @return Command\AbstractCommand
+     * @return \AbstractCommand
      * @throws IllegalCommandException
      */
     public function getCommandObject($cmd)
     {
-        $path = "{$this->cmdDir}/{$cmd}.php";
+        $cmd = ucfirst($cmd);
+
+        $path = __DIR__ . DIRECTORY_SEPARATOR . "{$this->cmdDir}/{$cmd}.php";
         if (!file_exists($path)) {
             throw new IllegalCommandException("Cannot find $path");
         }
@@ -48,7 +50,7 @@ class CommandManager
         }
 
         $command = new $cmd();
-        if (!$command instanceof Command\AbstractCommand) {
+        if (!$command instanceof \AbstractCommand) {
             throw new IllegalCommandException("`$cmd` is not a Command");
         }
         return $command;

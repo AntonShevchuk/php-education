@@ -1,10 +1,5 @@
 <?php
 /**
- * @namespace
- */
-namespace Education\Command;
-
-/**
  * Ping
  *
  * @package  Education\Command

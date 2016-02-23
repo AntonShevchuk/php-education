@@ -5,11 +5,11 @@
 namespace Education\Exception;
 
 /**
- * IllegalCommandException
+ * CommandManagerException
  *
  * @package  Education
  * @author   Anton Shevchuk
  */
-class IllegalCommandException extends CommandException
+class CommandManagerException extends EducationException
 {
 }

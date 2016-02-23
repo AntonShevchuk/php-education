@@ -1,10 +1,5 @@
 <?php
 /**
- * @namespace
- */
-namespace Education\Command;
-
-/**
  * AbstractCommand
  *
  * @package  Education
@@ -16,4 +11,14 @@ abstract class AbstractCommand
      * @return mixed
      */
     public abstract function execute();
+
+    /**
+     * Magic __invoke
+     *
+     * @return mixed
+     */
+    public function __invoke()
+    {
+        return $this->execute();
+    }
 }
