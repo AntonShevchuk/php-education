@@ -4,6 +4,7 @@
  */
 namespace Education;
 
+use Education\Exception\EducationException;
 use Education\Exception\IllegalCommandException;
 
 /**
@@ -18,6 +19,10 @@ class RequestHelper
     private $default= 'DefaultCommand';
     private $command;
 
+    /**
+     * RequestHelper constructor.
+     * @param null $request_array
+     */
     public function __construct($request_array = null)
     {
         if (!is_array($this->request = $request_array)) {
@@ -25,11 +30,29 @@ class RequestHelper
         }
     }
 
+    /**
+     * @return mixed
+     * @throws EducationException
+     */
     public function getCommandString()
     {
-        return ($this->command ? $this->command : ($this->command = $this->request['cmd']));
+        if ($this->command) {
+            return $this->command;
+        } else {
+            if (isset($this->request['cmd'])) {
+                $this->command = $this->request['cmd'];
+                return $this->command;
+            } else {
+                throw new EducationException("Request parameter `cmd` not found");
+            }
+        }
     }
 
+    /**
+     * @throws EducationException
+     * @throws IllegalCommandException
+     * @throws \Exception
+     */
     public function runCommand()
     {
         $command = $this->getCommandString();
@@ -46,7 +69,7 @@ class RequestHelper
                 throw $e;
             }
         } catch (\Exception $e) {
-            throw $e;
+            throw new EducationException("Package error", 0, $e);
         }
     }
 }

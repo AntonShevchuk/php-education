@@ -18,9 +18,15 @@ use Education\Exception\CommandManagerException;
 use Education\Exception\IllegalCommandException;
 
 try {
-    $helper = new RequestHelper(array('cmd'=>'ping'));
+    $helper = new RequestHelper();
     $helper->runCommand();
 } catch (\Exception $e) {
-    print $e->getMessage();
+    echo get_class($e) . '</br>';
+    echo $e->getMessage();
+    if ($e = $e->getPrevious()) {
+        echo '<hr/>';
+        echo get_class($e) . '</br>';
+        echo $e->getMessage();
+    }
     exit();
 }

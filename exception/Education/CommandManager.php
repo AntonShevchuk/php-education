@@ -36,6 +36,8 @@ class CommandManager
      */
     public function getCommandObject($cmd)
     {
+        // throw new \Exception("Uncatched");
+
         $cmd = ucfirst($cmd);
 
         $path = __DIR__ . DIRECTORY_SEPARATOR . "{$this->cmdDir}/{$cmd}.php";

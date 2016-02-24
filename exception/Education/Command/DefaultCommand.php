@@ -12,6 +12,6 @@ class DefaultCommand extends AbstractCommand
      */
     public function execute()
     {
-        echo 'pong';
+        echo 'Default Command';
     }
 }
