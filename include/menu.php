@@ -2,13 +2,10 @@
     <a href="display.php?file=phpinfo">PHP Info</a>
 </li>
 <li>
-    <a href="display.php?file=require">Difference between `require` and `require_once`</a>
-</li>
-<li>
     <a href="display.php?file=rewrite">Rewrite Apache Module</a>
 </li>
 <li>
-    Session for begginers
+    Session for beginners
     <ul>
         <li>
             <a href="display.php?file=session/start">Start the session</a>
@@ -24,6 +21,17 @@
         </li>
         <li>
             <a href="display.php?file=session/custom">Custom session</a>
+        </li>
+    </ul>
+</li>
+<li>
+    Files
+    <ul>
+        <li>
+            <a href="display.php?file=files/require">Difference between `require` and `require_once`</a>
+        </li>
+        <li>
+            <a href="display.php?file=files/config">Use `return` in files</a>
         </li>
     </ul>
 </li>
