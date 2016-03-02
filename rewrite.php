@@ -3,7 +3,7 @@
     <a href="/some-file/?key=value" class="list-group-item">URI: /some-file/?key=value</a>
     <a href="/some-file/key/value" class="list-group-item">URI: /some-file/key/value</a>
 </div>
-
+<hr/>
 <?php
 echo "<h2>URI: ";
 echo $_SERVER['REQUEST_URI'];

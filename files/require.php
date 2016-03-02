@@ -7,11 +7,23 @@ include 'notfound.php'; // warning
 require 'notfound.php'; // fatal error
 exit();
 */
-$config = require_once('config/array.php');
+
+/*
+$config = require_once('config/db.php');
 var_dump($config);
 
-$config = require_once('config/array.php');
+$config = require_once('config/db.php');
 var_dump($config);
 
-$config = require('config/array.php');
+$config = require('config/db.php');
 var_dump($config);
+*/
+
+$res = require_once 'echo.php';
+var_dump($res);
+
+$res = require_once 'echo.php';
+var_dump($res);
+
+$res = require 'echo.php';
+var_dump($res);

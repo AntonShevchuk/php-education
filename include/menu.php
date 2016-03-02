@@ -28,10 +28,25 @@
     Files
     <ul>
         <li>
-            <a href="display.php?file=files/require">Difference between `require` and `require_once`</a>
+            <a href="display.php?file=files/include">Include files</a>
         </li>
         <li>
-            <a href="display.php?file=files/config">Use `return` in files</a>
+            <a href="display.php?file=files/include-path">Include path</a>
+        </li>
+        <li>
+            <a href="display.php?file=files/require">Difference between <code>require</code> and <code>require_once</code></a>
+        </li>
+        <li>
+            <a href="files/append">Append and prepend directives</a>
+        </li>
+        <li>
+            <a href="display.php?file=files/config">Use <code>return</code> in files</a>
+        </li>
+        <li>
+            <a href="display.php?file=files/autoload">Use <code>__autoload</code> function</a>
+        </li>
+        <li>
+            <a href="display.php?file=files/spl-autoload">Use <code>spl_autoload_register</code> function</a>
         </li>
     </ul>
 </li>

@@ -1,6 +1,12 @@
 <?php
 $file = isset($_GET['file'])?$_GET['file']:die('Wrong filename');
-$file = $file . '.php';
+list($dir, $file) = preg_split('[\/]', $file, 2);
+
+if (isset($file)) {
+    $file = $dir . DIRECTORY_SEPARATOR . $file . '.php';
+} else {
+    $file = $dir . '.php';
+}
 
 if (!is_file(__DIR__ . DIRECTORY_SEPARATOR . $file)) die('Wrong filename');
 
