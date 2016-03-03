@@ -1,4 +1,4 @@
-<?php include_once 'include/header.php' ?>
+<?php include_once 'template/header.php' ?>
 
 <div class="jumbotron">
     <div class="container">
@@ -20,7 +20,7 @@
         </div>
         <div class="panel-body lead">
             <ul class="list-unstyled">
-                <?php include 'include/menu.php'; ?>
+                <?php include 'template/menu.php'; ?>
             </ul>
         </div>
     </div>
@@ -31,4 +31,4 @@
     </footer>
 </div>
 
-<?php include_once 'include/footer.php' ?>
+<?php include_once 'template/footer.php' ?>
