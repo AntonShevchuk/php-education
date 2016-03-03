@@ -7,6 +7,6 @@ Error handling
         <a href="error/e_notice.php">E_NOTICE</a>
     </li>
     <li>
-        <a href="error/shutdown.php">Shutdown function</a>
+        <a href="display.php?file=error/shutdown">Shutdown function</a>
     </li>
 </ul>

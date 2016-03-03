@@ -8,7 +8,15 @@ if (isset($file)) {
     $file = $dir . '.php';
 }
 
-if (!is_file(__DIR__ . DIRECTORY_SEPARATOR . $file)) die('Wrong filename');
+$path = realpath(__DIR__ . DIRECTORY_SEPARATOR . $file);
+
+if (strpos($path, __DIR__) !== 0) {
+    die('Wrong path to file');
+}
+
+if (!is_file(__DIR__ . DIRECTORY_SEPARATOR . $file)) {
+    die('Wrong filename');
+}
 
 $code = highlight_file($file, true);
 

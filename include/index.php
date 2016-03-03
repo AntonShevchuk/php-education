@@ -24,4 +24,7 @@ Include PHP files
     <li>
         <a href="display.php?file=include/spl-autoload">Use <code>spl_autoload_register</code> function</a>
     </li>
+    <li>
+        <a href="include/injection.php">PHP injection</a>
+    </li>
 </ul>
