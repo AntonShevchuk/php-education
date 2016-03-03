@@ -2,15 +2,16 @@
 	RewriteEngine On
 	RewriteBase /
 
-    # check size
+	# check size
 	RewriteCond %{REQUEST_FILENAME} -s [OR]
 	# check link
 	RewriteCond %{REQUEST_FILENAME} -l [OR]
 	# check directory
 	RewriteCond %{REQUEST_FILENAME} -d
-	# as is
+
+	# if something condition is true - return it as is
 	RewriteRule ^.*$ - [NC,L]
 
-	# one input point
-	RewriteRule ^.*$ rewrite.php [NC,L]
+	# else route to one file
+	RewriteRule ^.*$ display.php?file=rewrite [NC,L]
 </IfModule>

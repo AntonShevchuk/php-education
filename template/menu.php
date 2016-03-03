@@ -17,5 +17,8 @@
     <?php include 'session/index.php' ?>
 </li>
 <li>
+    <?php include 'files/index.php' ?>
+</li>
+<li>
     <a href="display.php?file=rewrite">Rewrite Apache Module</a>
 </li>

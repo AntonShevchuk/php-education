@@ -13,6 +13,9 @@ Include PHP files
         <a href="display.php?file=include/require">Difference between <code>require</code> and <code>require_once</code></a>
     </li>
     <li>
+        <a href="include/basedir.php">Apply <code>open_basedir</code> directive</a>
+    </li>
+    <li>
         <a href="include/append">Append and prepend directives</a>
     </li>
     <li>

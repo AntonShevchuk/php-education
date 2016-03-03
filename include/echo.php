@@ -1,1 +1,1 @@
-<pre>file</pre>
+<p>text of file echo.php</p>
