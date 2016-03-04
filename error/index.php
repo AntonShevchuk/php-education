@@ -11,4 +11,7 @@ Error handling
     <li>
         <a href="display.php?file=error/shutdown">Shutdown function</a>
     </li>
+    <li>
+        <a href="error/memory.php">Memory usage</a>
+    </li>
 </ul>
