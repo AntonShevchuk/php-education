@@ -12,6 +12,9 @@ Error handling
         <a href="display.php?file=error/shutdown">Shutdown function</a>
     </li>
     <li>
-        <a href="error/memory.php">Memory usage</a>
+        <a href="display.php?file=error/test">CPU usage</a>
+    </li>
+    <li>
+        <a href="display.php?file=error/test-at">CPU usage with <code>@</code></a>
     </li>
 </ul>
