@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 class Strict {
 
     public function test() {
-        echo "Test";
+        echo '<h3>OK</h3>';
     }
 
 }

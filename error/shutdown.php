@@ -5,9 +5,11 @@ ini_set('display_errors', 1);
 function shutdown() {
     $error = error_get_last();
     if (
+        // has error
         is_array($error) &&
-        in_array($error['type'], array(E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR))) {
         // fatal error has occurred
+        in_array($error['type'], array(E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR))
+    ) {
         while (ob_get_level()) {
             ob_end_clean();
         }

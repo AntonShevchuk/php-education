@@ -8,3 +8,8 @@ $b = array();
 $b['a'];
 
 UNKNOWN_CONSTANT;
+
+
+echo array();
+
+echo '<h3>OK</h3>';

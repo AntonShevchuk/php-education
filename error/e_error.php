@@ -16,4 +16,9 @@ ini_set('display_errors', 1);
 
 //throw new Exception();
 
+//$stdClass = new stdClass();
+//$stdClass->notExists();
+
 require_once 'not-exists.php';
+
+echo '<h3>OK</h3>';
