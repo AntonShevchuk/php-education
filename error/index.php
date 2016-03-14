@@ -12,9 +12,6 @@ Error handling
         <a href="display.php?file=error/error_handler">Error handler</a>
     </li>
     <li>
-        <a href="display.php?file=error/exception_handler">Exception handler</a>
-    </li>
-    <li>
         <a href="display.php?file=error/shutdown">Shutdown function</a>
     </li>
     <li>

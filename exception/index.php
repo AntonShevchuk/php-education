@@ -6,4 +6,10 @@ Error handling with Exceptions
     <li>
         <a href="exception/front.php">With Front wrapper</a>
     </li>
+    <li>
+        <a href="display.php?file=error/exception_handler">Exception handler</a>
+    </li>
+    <li>
+        <a href="display.php?file=error/php7">Exceptions in PHP7</a>
+    </li>
 </ul>
