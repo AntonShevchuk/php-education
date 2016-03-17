@@ -7,7 +7,13 @@ Error handling with Exceptions
         <a href="exception/front.php">With Front wrapper</a>
     </li>
     <li>
-        <a href="display.php?file=exception/exception_handler">Exception handler</a>
+        <a href="display.php?file=exception/exception">Exception example (50/50)</a>
+    </li>
+    <li>
+        <a href="display.php?file=exception/file">Need more exceptions</a>
+    </li>
+    <li>
+        <a href="display.php?file=exception/handler">Exception handler</a>
     </li>
     <li>
         <a href="display.php?file=exception/php7">Exceptions in PHP7</a>

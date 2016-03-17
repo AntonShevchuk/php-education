@@ -9,7 +9,7 @@ Error handling
         <a href="error/e_deprecated.php">E_DEPRECATED</a>
     </li>
     <li>
-        <a href="display.php?file=error/error_handler">Error handler</a>
+        <a href="display.php?file=error/handler">Error handler</a>
     </li>
     <li>
         <a href="display.php?file=error/shutdown">Shutdown function</a>
