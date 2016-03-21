@@ -10,6 +10,9 @@ Error handling with Exceptions
         <a href="display.php?file=exception/exception">Exception example (50/50)</a>
     </li>
     <li>
+        <a href="display.php?file=exception/finally">Exception with <code>finally</code></a>
+    </li>
+    <li>
         <a href="display.php?file=exception/file">Need more exceptions</a>
     </li>
     <li>

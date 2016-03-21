@@ -23,4 +23,7 @@ Error handling
     <li>
         <a href="display.php?file=error/test-at">CPU usage with <code>@</code></a>
     </li>
+    <li>
+        <a href="display.php?file=error/backtrace">Backtrace example</a>
+    </li>
 </ul>
