@@ -38,9 +38,9 @@ ob_end_clean();
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
    <style>
-        code {
+        .panel-body code {
             display: block;
-            padding: 9.5px;
+            padding: 8px;
             background-color: #f5f5f5;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -67,7 +67,7 @@ ob_end_clean();
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">List of examples <span class="caret"></span></a>
                     <ul class="dropdown-menu list-group">
-                        <?php include 'menu.php'; ?>
+                        <?php include 'template/menu.php'; ?>
                     </ul>
                 </li>
             </ul>

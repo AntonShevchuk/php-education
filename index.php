@@ -14,20 +14,13 @@
     </div>
 </div>
 <div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Examples of code</h3>
-        </div>
-        <div class="panel-body lead">
-            <ul class="list-unstyled">
-                <?php include 'template/menu.php'; ?>
-            </ul>
-        </div>
-    </div>
+    <ul class="list-unstyled lead">
+        <?php include 'template/menu.php'; ?>
+    </ul>
 </div>
 <div class="container">
-    <footer class="row">
-        <div class="center">&copy; 2016 <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a></div>
+    <footer class="row text-center">
+        &copy; 2016 <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a>
     </footer>
 </div>
 

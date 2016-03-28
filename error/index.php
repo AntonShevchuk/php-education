@@ -9,21 +9,21 @@ Error handling
         <a href="error/e_deprecated.php">E_DEPRECATED</a>
     </li>
     <li>
-        <a href="display.php?file=error/handler">Error handler</a>
+        <a href="display/error/handler">Error handler</a>
     </li>
     <li>
-        <a href="display.php?file=error/shutdown">Shutdown function</a>
+        <a href="display/error/shutdown">Shutdown function</a>
     </li>
     <li>
-        <a href="display.php?file=error/at">Use <code>@</code></a>
+        <a href="display/error/at">Use <code>@</code></a>
     </li>
     <li>
-        <a href="display.php?file=error/test">CPU usage</a>
+        <a href="display/error/test">CPU usage</a>
     </li>
     <li>
-        <a href="display.php?file=error/test-at">CPU usage with <code>@</code></a>
+        <a href="display/error/test-at">CPU usage with <code>@</code></a>
     </li>
     <li>
-        <a href="display.php?file=error/backtrace">Backtrace example</a>
+        <a href="display/error/backtrace">Backtrace example</a>
     </li>
 </ul>

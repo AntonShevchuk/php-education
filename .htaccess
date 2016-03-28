@@ -12,6 +12,9 @@
 	# if something condition is true - return it as is
 	RewriteRule ^.*$ - [NC,L]
 
+    # if it's started with /display/
+    RewriteRule ^display\/(.*)$ display.php?file=$1 [NC,L]
+
 	# else route to one file
 	RewriteRule ^.*$ display.php?file=rewrite [NC,L]
 </IfModule>
