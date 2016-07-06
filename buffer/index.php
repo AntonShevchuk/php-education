@@ -15,4 +15,7 @@ Output Buffer
     <li>
         <a href="/buffer/flush.php">Flush It!</a>
     </li>
+    <li>
+        <a href="/buffer/template.php">Template Engine</a>
+    </li>
 </ul>
