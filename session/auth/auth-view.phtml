@@ -1,11 +1,18 @@
 <?php if ($auth->isAuth()) : ?>
-    You are logged in as <b><?=$auth->getLogin()?></b>
-    <a href="/display/session/auth/logout">(Logout)</a>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">You are logged in as <b><?=$auth->getLogin()?></h3>
+        </div>
+        <div class="panel-body">
+            Click for <a href="/display/session/auth/logout">logout</a>
+        </div>
+    </div>
+    <?php return; ?>
 <?php endif; ?>
-<br><br>
+
 <div class="container">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Sign in</h3>
@@ -30,12 +37,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <p>
-                <b>login:</b> test_user
-                <br>
-                <b>password:</b> 123
-            </p>
+        <div class="col-lg-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Credentials</h3>
+                </div>
+                <div class="panel-body">
+                    <dl>
+                        <dt>login</dt>
+                        <dd><?=$auth->login?></dd>
+                        <dt>password</dt>
+                        <dd><?=$auth->pass?></dd>
+                    </dl>
+                </div>
+            </div>
         </div>
     </div>
 </div>

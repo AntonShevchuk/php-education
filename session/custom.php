@@ -11,3 +11,5 @@ if (isset($_SESS["id"])) {
 } else {
     $_SESS["id"] = 42;
 }
+
+// reload page

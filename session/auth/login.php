@@ -1,9 +1,8 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set( 'display_errors', 1 );
 
-require_once('authentication.php');
+require_once 'authentication.php';
 
 // check the existence of session and resume it
 if (isset($_COOKIE[session_name()])) {
@@ -12,7 +11,7 @@ if (isset($_COOKIE[session_name()])) {
 
 $auth = new Authentication();
 if (isset($_POST['login']) && isset($_POST['pass'])) {
-    //login user
+    // login user
     $auth->auth($_POST['login'], $_POST['pass']);
 }
 

@@ -1,12 +1,11 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set( 'display_errors', 1 );
 
 class Authentication
 {
-    public $login = 'test_user';
-    public $pass = 123;
+    public $login = 'user';
+    public $pass = 'pass';
     public $error = false;
 
     /**
