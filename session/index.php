@@ -15,4 +15,7 @@ Session for beginners
     <li>
         <a href="/display/session/custom">Custom session</a>
     </li>
+    <li>
+        <a href="/display/session/auth/login">Simple Sign in</a>
+    </li>
 </ul>
