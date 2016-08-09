@@ -7,13 +7,17 @@ Output Buffer
         <a href="/display/buffer/header">Header always sent</a>
     </li>
     <li>
-        <a href="/buffer/default.php">Header error</a>
+        <a href="/buffer/error.php">Error &laquo;headers already sent&raquo;</a>
+    </li>
+    <li>
+        <a href="/display/buffer/clean">Clean</a>
     </li>
     <li>
         <a href="/display/buffer/deep">&laquo;We need to go deeper&raquo;</a>
     </li>
     <li>
-        <a href="/buffer/flush.php">Flush It!</a>
+        <a href="/buffer/flush.php">Flush it</a>!
+        <a href="/buffer/flush2.php">Again</a> and <a href="/buffer/flush2.php">again</a>!
     </li>
     <li>
         <a href="/buffer/template.php">Template Engine</a>

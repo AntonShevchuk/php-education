@@ -11,3 +11,5 @@ ob_end_clean();
 header("OB-END: 1");
 
 echo '<h3>Open browser console and find `PHP-VERSION` header</h3>';
+
+echo 'Output buffer level: ' . ob_get_level() . "<br/>\n";

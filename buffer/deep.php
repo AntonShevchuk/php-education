@@ -12,3 +12,8 @@ ob_start();
         ob_end_flush();
     ob_end_flush();
 ob_end_flush();
+
+
+echo '<pre>';
+print_r(ob_get_status(true));
+echo '</pre>';
