@@ -2,8 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// echo str_pad(' ', 4096); // for fill PHP output buffer
+// disable output buffering
+if (ini_get('output_buffering')) {
+    while (ob_get_level()) ob_end_flush();
+}
 
+// start
 ob_start();
 {
     echo "<h1>Hello world!</h1>";
@@ -12,5 +16,6 @@ ob_start();
     $content = ob_get_contents();
 }
 ob_end_clean();
+// end
 
 echo $content;

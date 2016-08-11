@@ -2,15 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// disable output buffering
-if (ini_get('output_buffering')) {
-    while (ob_get_level()) ob_end_flush();
-}
+// get output buffering size
+$buffer = ini_get('output_buffering');
 
 echo "<h3>Please waiting for 10 seconds...</h3>";
 
 for ($i = 1; $i <= 10; $i++) {
-    echo $i . "<br/>\n";
+    echo str_pad($i, $buffer); // fill buffer with space symbols
     flush(); // send string to browser
     sleep(1);
 }
