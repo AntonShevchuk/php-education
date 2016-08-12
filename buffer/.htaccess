@@ -1,5 +1,4 @@
-# for `deep.php` - disable buffering
-# php_value output_buffering Off
-
-# for `flush.php` - enable buffering and set to 4kb
+# php_value output_buffering off
 php_value output_buffering 4096
+
+# php_flag implicit_flush on
