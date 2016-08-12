@@ -7,7 +7,7 @@ if (ini_get('output_buffering')) {
     while (ob_get_level()) ob_end_flush();
 }
 
-//ob_implicit_flush(); // implicitly calls flush() after every output or ob_flush() call
+ob_implicit_flush(); // implicitly calls flush() after every output or ob_flush() call
 
 echo "<h3>Please waiting for 10 seconds...</h3>";
 
