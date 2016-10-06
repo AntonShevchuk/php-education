@@ -4,6 +4,9 @@ Session for beginners
         <a href="/display/session/start">Start the session</a>
     </li>
     <li>
+        <a href="/display/session/protection">Simple protection</a>
+    </li>
+    <li>
         <a href="/display/session/decode">Decode session file</a>
     </li>
     <li>
