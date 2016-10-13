@@ -20,5 +20,8 @@
     <?php include 'files/index.php' ?>
 </li>
 <li class="list-group-item">
+    <?php include 'sockets/index.php' ?>
+</li>
+<li class="list-group-item">
     <a href="display/rewrite">Rewrite Apache Module</a>
 </li>
