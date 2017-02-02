@@ -14,7 +14,7 @@ set_time_limit(0);
 ob_implicit_flush();
 
 // settings
-$address = '10.10.24.151';
+$address = '127.0.0.1';
 $port = 1000;
 
 // create a streaming socket, of type TCP/IP
@@ -41,6 +41,8 @@ if (socket_listen($socket, 5) === false) {
 } else {
     echo "- listen\n";
 }
+
+socket_set_nonblock($socket);
 
 // create a list of all the clients that will be connected to us..
 // add the listening socket to this list
@@ -69,6 +71,8 @@ do {
     if (in_array($socket, $read)) {
         // accept the client, and add him to the $clients array
         $clients[] = $client = socket_accept($socket);
+
+        socket_set_nonblock($client);
 
         // client UID
         $key = array_search($client, $clients);
