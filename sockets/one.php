@@ -10,16 +10,26 @@ error_reporting(E_ALL);
 // allow the script to hang around waiting for connections
 set_time_limit(0);
 
-// turn on implicit output flushing so we see what we're getting as it comes in
-ob_implicit_flush();
-
 // settings
 $address = '127.0.0.1';
-$port = 1000;
+$port = 10000;
+
+// сheck CLI
+if (PHP_SAPI !== 'cli') {
+    echo
+        "<br/>\n" .
+        "Use following code for run server: <code>php -f ./sockets/one.php</code>" .
+        "than try to connect to it: <code>telnet $address $port</code>";
+    return;
+}
+
+// turn on implicit output flushing so we see what we're getting as it comes in
+ob_implicit_flush();
 
 // create a streaming socket, of type TCP/IP
 if (($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === false) {
     echo "socket_create() failed: reason: " . socket_strerror(socket_last_error()) . "\n";
+    die();
 } else {
     echo "socket created\n";
 }
@@ -28,6 +38,7 @@ if (($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === false) {
 // so this means that all connections on this port are now our resposibility to send/recv data, disconnect, etc..
 if (socket_bind($socket, $address, $port) === false) {
     echo "socket_bind() failed: reason: " . socket_strerror(socket_last_error($socket)) . "\n";
+    die();
 } else {
     echo "- bind to $address:$port\n";
 }
@@ -35,6 +46,7 @@ if (socket_bind($socket, $address, $port) === false) {
 // start listen for connections
 if (socket_listen($socket, 5) === false) {
     echo "socket_listen() failed: reason: " . socket_strerror(socket_last_error($socket)) . "\n";
+    die();
 } else {
     echo "- listen\n";
 }
@@ -47,7 +59,7 @@ do {
         break;
     }
     // send instructions
-    $msg = "\nWelcome to the PHP Test Server. \r\n" .
+    $msg = "\nWelcome to the PHP Test Server!\r\n" .
         "To quit, type 'quit'. To shut down the server type 'shutdown'.\r\n";
     socket_write($client, $msg, strlen($msg));
 

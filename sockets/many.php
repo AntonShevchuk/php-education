@@ -10,12 +10,23 @@ error_reporting(E_ALL);
 // allow the script to hang around waiting for connections
 set_time_limit(0);
 
+// settings
+$address = '127.0.0.1';
+$port = 10000;
+
+// сheck CLI
+// сheck CLI
+if (PHP_SAPI !== 'cli') {
+    echo
+        "<br/>\n" .
+        "Use following code for run server: <code>php -f ./sockets/many.php</code>" .
+        "than try to connect to it: <code>telnet $address $port</code>";
+    return;
+}
+
 // turn on implicit output flushing so we see what we're getting as it comes in
 ob_implicit_flush();
 
-// settings
-$address = '127.0.0.1';
-$port = 1000;
 
 // create a streaming socket, of type TCP/IP
 if (($socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === false) {
@@ -78,7 +89,7 @@ do {
         $key = array_search($client, $clients);
 
         // send to the client a welcome message
-        $msg = "Welcome to the PHP Test Server\r\n" .
+        $msg = "Welcome to the PHP Test Server!\r\n" .
             "There are ".(count($clients) - 1)." client(s) connected to the server\r\n" .
             "Your client ID: {$key} \r\n"
         ;
