@@ -4,10 +4,18 @@ Session for beginners
         <a href="/display/session/start">Start the session</a>
     </li>
     <li>
-        <a href="/display/session/lock">Lock the session file for 10 seconds</a>
-    </li>
-    <li>
-        <a href="/display/session/close">Close session for writing</a>
+        Lock the session:
+        <ul>
+          <li>
+            <a href="/display/session/lock">Lock the session file for 10 seconds</a>
+          </li>
+          <li>
+            <a href="/display/session/write-close">Read and close session for writing. Call method <code>session_write_close()</code></a>
+          </li>
+          <li>
+            <a href="/display/session/read-close">Read and close session for writing. Uses <code>read_and_close</code> option</a>
+          </li>
+        </ul>
     </li>
     <li>
         <a href="/display/session/protection">Simple protection</a>
