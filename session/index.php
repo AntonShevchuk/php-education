@@ -4,6 +4,12 @@ Session for beginners
         <a href="/display/session/start">Start the session</a>
     </li>
     <li>
+        <a href="/display/session/lock">Lock the session file for 10 seconds</a>
+    </li>
+    <li>
+        <a href="/display/session/close">Close session for writing</a>
+    </li>
+    <li>
         <a href="/display/session/protection">Simple protection</a>
     </li>
     <li>
