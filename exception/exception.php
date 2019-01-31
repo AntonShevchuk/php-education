@@ -1,11 +1,10 @@
 <?php
 try {
-    if (rand(0,1)) {
-        throw new Exception("One");
-    } else {
-        echo "Zero";
+    if (random_int(0,1)) {
+        throw new Exception('One');
     }
+    echo 'Zero';
 } catch (Exception $e) {
-    echo "Exception: ";
+    echo 'Exception: ';
     echo $e->getMessage();
 }

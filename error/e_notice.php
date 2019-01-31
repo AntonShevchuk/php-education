@@ -2,14 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// undefined variable
 echo $a;
 
-$b = array();
+// undefined index
+$b = [];
 $b['a'];
 
+// undefined constant
 UNKNOWN_CONSTANT;
 
-
-echo array();
-
-echo '<h3>OK</h3>';
+// array to string conversion
+echo ['😈'];

@@ -90,7 +90,7 @@ while (true) {
 
         // disconnect
         fclose($connect);
-        unset($clients[array_search($connect, $clients)]);
+        unset($clients[array_search($connect, $clients, false)]);
     }
 }
 

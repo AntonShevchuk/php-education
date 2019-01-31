@@ -14,13 +14,13 @@ if (!is_writable($GLOBALS['_SESS_DIR'])) {
  */
 function sess_start() {
 
-    $id = sess_id() ?: uniqid('SESS_');
+    $id = sess_id() ?: uniqid('SESS_', true);
 
     sess_id($id);
 
     $file = $GLOBALS['_SESS_DIR'] . $id . '.sess';
     if (file_exists($file)) {
-        $GLOBALS['_SESS'] = unserialize(file_get_contents($file));
+        $GLOBALS['_SESS'] = unserialize(file_get_contents($file), ['allowed_classes' => true]);
     } else {
         $GLOBALS['_SESS'] = [];
     }
@@ -43,7 +43,9 @@ function sess_id($id = null) {
 
     if ($sess_id) {
         return $sess_id;
-    } elseif (isset($_COOKIE, $_COOKIE['PHPSESS'])) {
+    }
+
+    if (isset($_COOKIE['PHPSESS'])) {
         $sess_id = $_COOKIE['PHPSESS'];
     }
     return $sess_id;

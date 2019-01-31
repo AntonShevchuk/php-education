@@ -7,7 +7,7 @@ if (ini_get('output_buffering')) {
     ob_end_flush();
 }
 
-echo "<h3>Please waiting for 10 seconds...</h3>";
+echo '<h3>Please waiting for 10 seconds...</h3>';
 
 for ($i = 1; $i <= 10; $i++) {
     echo $i . "<br/>\n";
@@ -15,4 +15,4 @@ for ($i = 1; $i <= 10; $i++) {
     sleep(1);
 }
 
-echo "<h3>Thx!</h3>";
+echo '<h3>Thx!</h3>';

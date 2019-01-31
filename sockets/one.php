@@ -76,11 +76,11 @@ do {
             continue;
         }
         // `quit` for break read loop
-        if ($buf == 'quit') {
+        if ($buf === 'quit') {
             break;
         }
         // `shutdown` for break server loop
-        if ($buf == 'shutdown') {
+        if ($buf === 'shutdown') {
             socket_close($client);
             break 2;
         }

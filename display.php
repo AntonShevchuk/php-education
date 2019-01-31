@@ -1,5 +1,5 @@
 <?php
-$file = isset($_GET['file'])?$_GET['file']:die('Wrong filename');
+$file = $_GET['file'] ?? die('Wrong filename');
 list($dir, $file) = preg_split('[\/]', $file, 2);
 
 if (isset($file)) {
@@ -102,9 +102,10 @@ ob_end_clean();
     </div>
 </div>
 <div class="container">
-    <footer class="row">
-        <div class="center">&copy; 2016 <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a></div>
-    </footer>
+  <footer class="row text-center text-muted">
+      © 2016 - <?= date('Y') ?> <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a><br/>
+      © 2016 - <?= date('Y') ?> <a href="http://anton.shevchuk.name/">Anton Shevchuk</a>
+  </footer>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

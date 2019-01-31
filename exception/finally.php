@@ -17,6 +17,6 @@ try {
     }
 } catch (Exception $e) {
     echo $e->getMessage();
-    echo "<br/>";
+    echo '<br/>';
     echo $e->getPrevious()->getMessage();
 }

@@ -6,11 +6,11 @@ $buffer = ini_get('output_buffering') ?: 1;
 
 echo str_pad('', $buffer - 1);
 
-header("TAG-A: ". PHP_VERSION);
+header('TAG-A: ' . PHP_VERSION);
 
 echo ' ';
 
-header("TAG-B: ". PHP_VERSION);
+header('TAG-B: ' . PHP_VERSION);
 
 echo '<h3>Open browser console and try to find `TAG-A` and `TAG-B` headers</h3>';
 

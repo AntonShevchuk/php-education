@@ -79,14 +79,14 @@ do {
     }
 
     // check if there is a client trying to connect
-    if (in_array($socket, $read)) {
+    if (in_array($socket, $read, false)) {
         // accept the client, and add him to the $clients array
         $clients[] = $client = socket_accept($socket);
 
         socket_set_nonblock($client);
 
         // client UID
-        $key = array_search($client, $clients);
+        $key = array_search($client, $clients, false);
 
         // send to the client a welcome message
         $msg = "Welcome to the PHP Test Server!\r\n" .
@@ -113,7 +113,7 @@ do {
         // check if the client is disconnected
         if ($data === false) {
             // remove client for $clients array
-            $key = array_search($readClient, $clients);
+            $key = array_search($readClient, $clients, false);
             unset($clients[$key]);
             echo "Client '{$key}' disconnected.\n";
             // continue to the next client to read from, if any
@@ -127,7 +127,7 @@ do {
         if (!empty($data)) {
 
             // client UID
-            $key = array_search($readClient, $clients);
+            $key = array_search($readClient, $clients, false);
 
             // prepare message
             $msg = "Client '{$key}': {$data}\r\n";

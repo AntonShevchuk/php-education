@@ -59,4 +59,3 @@ printf('%f seconds <br/>', $secondTime - $firstTime);
 echo number_format($secondMemory - $firstMemory, 0, '.', ' '), ' bytes<br/>';
 echo '</pre>';
 printf('<strong>%d</strong> times slower <br/>', $secondTime / $firstTime);
-

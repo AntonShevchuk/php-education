@@ -13,10 +13,7 @@ class Authentication
      */
     public function isAuth()
     {
-        if (isset($_SESSION['is_auth'])) {
-            return $_SESSION['is_auth'];
-        }
-        return false;
+        return $_SESSION['is_auth'] ?? false;
     }
 
     /**
@@ -26,8 +23,8 @@ class Authentication
      */
     public function auth($login, $pass)
     {
-        if ($login == $this->login && $pass == $this->pass) {
-            if (session_status() == PHP_SESSION_NONE) {
+        if ($login === $this->login && $pass === $this->pass) {
+            if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
             $_SESSION['is_auth'] = true;
@@ -56,7 +53,7 @@ class Authentication
      */
     public function logOut()
     {
-        $_SESSION[] = array();
+        $_SESSION[] = [];
         session_destroy();
     }
 }

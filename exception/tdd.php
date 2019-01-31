@@ -12,7 +12,7 @@ function backlog($script, $line, $code, $message) {
 assert_options(ASSERT_WARNING,  false);
 assert_options(ASSERT_CALLBACK, 'backlog');
 
-assert("sqr(4) == 16", "When I send integer, function should return square of it");
+assert('sqr(4) == 16', 'When I send integer, function should return square of it');
 
 function sqr($a) {
     return;

@@ -55,7 +55,7 @@ while (true) {
     }
 
     // check if there is a client trying to connect
-    if (in_array($server, $read)) {
+    if (in_array($server, $read, false)) {
         // accept the client, try to send handshake
         if ($client = stream_socket_accept($server, -1)) {
             // retrieve and check HTTP headers
@@ -86,7 +86,7 @@ while (true) {
         // close connection
         if (!strlen($data)) {
             fclose($client);
-            unset($clients[array_search($client, $clients)]);
+            unset($clients[array_search($client, $clients, false)]);
             continue;
         }
         // received data
@@ -96,7 +96,7 @@ while (true) {
             echo "received:\n";
             echo $message . "\n";
 
-            $key = array_search($client, $clients);
+            $key = array_search($client, $clients, false);
 
             broadcast($clients, "<strong>user #{$key}</strong>: $message");
         }

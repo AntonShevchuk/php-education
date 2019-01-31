@@ -8,7 +8,7 @@ function shutdown() {
         // has error
         is_array($error) &&
         // fatal error has occurred
-        in_array($error['type'], array(E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR))
+        in_array($error['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR], false)
     ) {
         while (ob_get_level()) {
             ob_end_clean();

@@ -16,5 +16,5 @@ function ob_handler ($buffer, $phase) {
 }
 
 ob_start('ob_handler');
-echo "hello world";
+echo 'hello world';
 ob_get_flush();

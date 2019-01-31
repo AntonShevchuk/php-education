@@ -2,8 +2,16 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// failed to open stream
+// failed opening for inclusion
+/*
 include_once 'not-exists.php';
+*/
 
-join('string', 'string');
+// invalid arguments
+implode('string', 'string');
 
-echo '<h3>OK</h3>';
+// non-numeric value
+/*
+'😈'+'😈'+'😈';
+*/

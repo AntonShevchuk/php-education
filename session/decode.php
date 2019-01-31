@@ -7,12 +7,12 @@ session_start();
 $_SESSION['integer var'] = 123;
 $_SESSION['float var'] = 1.23;
 $_SESSION['octal var'] = 0x123;
-$_SESSION['string var'] = "Hello world";
-$_SESSION['array var'] = array('one', 'two', [1,2,3]);
+$_SESSION['string var'] = 'Hello world';
+$_SESSION['array var'] = ['one', 'two', [1,2,3]];
 
 $object = new stdClass();
 $object->foo = 'bar';
-$object->arr = array('hello', 'world');
+$object->arr = ['hello', 'world'];
 
 $_SESSION['object var'] = $object;
 $_SESSION['integer again'] = 42;
@@ -23,7 +23,7 @@ var_dump($_SESSION);
 
 $name = ini_get('session.name');
 
-$file = isset($_COOKIE[$name])?$_COOKIE[$name]:null;
+$file = $_COOKIE[$name] ?? null;
 
 if ($file) {
     $path = ini_get('session.save_path');
@@ -38,15 +38,15 @@ if ($file) {
     var_dump($data);
 
     echo '<h2>Split by pipe</h2>';
-    $arr = preg_split('/\|/',$data);
+    $arr = explode("\|", $data);
     var_dump($arr);
 
     $session_value = array();
     $session_key = array();
     $session_key[] = array_shift($arr);
-    $session_value[sizeof($arr)-1] = array_pop($arr);
+    $session_value[count($arr)-1] = array_pop($arr);
 
-    for ($i=0; $i<count($arr); $i++){
+    for ($i=0, $iMax = count($arr); $i< $iMax; $i++){
         if (strpos($arr[$i],'i:') === 0 || strpos($arr[$i],'d:') === 0 ) {
             $mass = explode(';', $arr[$i], 2);
             $session_key[] = $mass[1];

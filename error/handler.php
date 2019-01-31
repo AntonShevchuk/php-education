@@ -16,7 +16,7 @@
         }
         echo "<h2>$type: $message</h2>";
         echo "<p><strong>File</strong>: $file:$line</p>";
-        echo "<p><strong>Context</strong>: $". join(', $', array_keys($context))."</p>";
+        echo "<p><strong>Context</strong>: $". implode(', $', array_keys($context))."</p>";
         return true;
     }
 
@@ -26,7 +26,7 @@
 echo $a;
 
 // generate E_WARNING error
-join('string', 'string');
+implode('string', 'string');
 
 // generate E_USER_DEPRECATED
 trigger_error('Deprecated error', E_USER_DEPRECATED);

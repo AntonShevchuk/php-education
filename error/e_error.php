@@ -2,23 +2,37 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-//function deep() {
-//    deep();
-//}
-//
-//deep();
+// nesting level
+/*
+function deep() {
+    deep();
+}
+deep();
+*/
 
-//$arr = array();
-//
-//while (true) {
-//    $arr[] = str_pad(' ', 1024);
-//}
+// allowed memory size
+/*
+$arr = [];
+while (true) {
+    $arr[] = str_pad(' ', 1024);
+}
+*/
 
-//throw new Exception();
+// uncaught exception
+/*
+throw new Exception();
+*/
 
-//$stdClass = new stdClass();
-//$stdClass->notExists();
+// undefined method
+/*
+$stdClass = new stdClass();
+$stdClass->notExists();
+*/
 
+// undefined function
+the_roof_is_on_fire();
+
+// failed opening required
+/*
 require_once 'not-exists.php';
-
-echo '<h3>OK</h3>';
+*/

@@ -10,9 +10,9 @@ if (isset($_COOKIE[session_name()])) {
 }
 
 $auth = new Authentication();
-if (isset($_POST['login']) && isset($_POST['pass'])) {
+if (isset($_POST['login'], $_POST['pass'])) {
     // login user
     $auth->auth($_POST['login'], $_POST['pass']);
 }
 
-require_once('auth-view.phtml');
+require_once 'auth-view.phtml';

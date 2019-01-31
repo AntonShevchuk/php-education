@@ -65,7 +65,7 @@ function decode($data)
     $firstByteBinary = sprintf('%08b', ord($data[0]));
     $secondByteBinary = sprintf('%08b', ord($data[1]));
     $opcode = bindec(substr($firstByteBinary, 4, 4));
-    $isMasked = ($secondByteBinary[0] == '1') ? true : false;
+    $isMasked = $secondByteBinary[0] == '1';
     $payloadLength = ord($data[1]) & 127;
 
     // unmasked frame is received:
@@ -134,7 +134,7 @@ function decode($data)
         }
         $decodedData['payload'] = $unmaskedPayload;
     } else {
-        $payloadOffset = $payloadOffset - 4;
+        $payloadOffset -= 4;
         $decodedData['payload'] = substr($data, $payloadOffset);
     }
 
@@ -142,14 +142,16 @@ function decode($data)
 }
 
 /**
- * @param $payload
+ * @param        $payload
  * @param string $type
- * @param bool $masked
- * @return string
+ * @param bool   $masked
+ *
+ * @return array|string
+ * @throws Exception
  */
 function encode($payload, $type = 'text', $masked = false)
 {
-    $frameHead = array();
+    $frameHead = [];
     $payloadLength = strlen($payload);
 
     switch ($type) {
@@ -180,7 +182,7 @@ function encode($payload, $type = 'text', $masked = false)
         }
         // most significant bit MUST be 0
         if ($frameHead[2] > 127) {
-            return array('type' => '', 'payload' => '', 'error' => 'frame too large (1004)');
+            return ['type' => '', 'payload' => '', 'error' => 'frame too large (1004)'];
         }
     } elseif ($payloadLength > 125) {
         $payloadLengthBin = str_split(sprintf('%016b', $payloadLength), 8);
@@ -197,9 +199,9 @@ function encode($payload, $type = 'text', $masked = false)
     }
     if ($masked === true) {
         // generate a random mask:
-        $mask = array();
+        $mask = [];
         for ($i = 0; $i < 4; $i++) {
-            $mask[$i] = chr(rand(0, 255));
+            $mask[$i] = chr(random_int(0, 255));
         }
 
         $frameHead = array_merge($frameHead, $mask);
@@ -207,8 +209,8 @@ function encode($payload, $type = 'text', $masked = false)
     $frame = implode('', $frameHead);
 
     // append payload to frame:
-    for ($i = 0; $i < $payloadLength; $i++) {
-        $frame .= ($masked === true) ? $payload[$i] ^ $mask[$i % 4] : $payload[$i];
+    foreach ($payload as $i => $iValue) {
+        $frame .= ($masked === true) ? $iValue ^ $mask[$i % 4] : $payload[$i];
     }
 
     return $frame;

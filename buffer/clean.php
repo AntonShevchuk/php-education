@@ -4,11 +4,11 @@ ini_set('display_errors', 1);
 
 ob_start();
 
-echo "hello";
+echo 'hello';
 $a = ob_get_contents();
 ob_clean();
 
-echo "world";
+echo 'world';
 $b = ob_get_contents();
 ob_end_clean();
 

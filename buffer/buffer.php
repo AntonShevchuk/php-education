@@ -10,7 +10,7 @@ if (ini_get('output_buffering')) {
 // start
 ob_start();
 {
-    echo "<h1>Hello world!</h1>";
+    echo '<h1>Hello world!</h1>';
     require dirname(__DIR__) . '/include/template/list.php';
     session_start();
     $content = ob_get_contents();

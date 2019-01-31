@@ -29,14 +29,14 @@ try {
         throw new FileException('System can\'t open log file');
     }
 
-    fputs($file, date("[H:i:s]") . " done\n");
+    fwrite($file, date('[H:i:s]') . " done\n");
     fclose($file);
 } catch (DirectoryException $e) {
-    echo "С директорией возникла проблема: ". $e->getMessage();
+    echo 'С директорией возникла проблема: ' . $e->getMessage();
 } catch (FileException $e) {
-    echo "С файлом возникла проблема: ". $e->getMessage();
+    echo 'С файлом возникла проблема: ' . $e->getMessage();
 } catch (FileSystemException $e) {
-    echo "Ошибка файловой системы: ". $e->getMessage();
+    echo 'Ошибка файловой системы: ' . $e->getMessage();
 } catch (Exception $e) {
-    echo "Ошибка сервера: ". $e->getMessage();
+    echo 'Ошибка сервера: ' . $e->getMessage();
 }

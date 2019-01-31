@@ -19,8 +19,9 @@
     </ul>
 </div>
 <div class="container">
-    <footer class="row text-center">
-        &copy; 2016 <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a>
+    <footer class="row text-center text-muted">
+        © 2016 - <?= date('Y') ?> <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a><br/>
+        © 2016 - <?= date('Y') ?> <a href="http://anton.shevchuk.name/">Anton Shevchuk</a>
     </footer>
 </div>
 

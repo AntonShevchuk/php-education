@@ -7,7 +7,7 @@ function myHandler($level, $message) {
         echo "<h2>$message</h2>";
         return true;
     } else {
-        echo "<h2>At @ detected</h2>";
+        echo '<h2>At @ detected</h2>';
         return true;
     }
 }
