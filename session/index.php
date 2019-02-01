@@ -35,4 +35,7 @@ Session for beginners
     <li>
         <a href="/display/session/auth/login">Simple Sign in</a>
     </li>
+    <li>
+        <a href="/display/session/destroy">Destroy all sessions</a>
+    </li>
 </ul>
