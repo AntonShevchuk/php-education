@@ -27,4 +27,7 @@ Include PHP files
     <li>
         <a href="/include/injection.php">PHP injection</a>
     </li>
+    <li>
+        <a href="/include/basedir.php">Apply <code>open_basedir</code> directive</a>
+    </li>
 </ul>
