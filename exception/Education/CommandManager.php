@@ -1,9 +1,12 @@
 <?php
+
 /**
  * @namespace
  */
+
 namespace Education;
 
+use Education\Command;
 use Education\Exception\CommandManagerException;
 use Education\Exception\IllegalCommandException;
 
@@ -47,12 +50,14 @@ class CommandManager
 
         require_once $path;
 
-        if (!class_exists($cmd)) {
+        $class = "Education\\Command\\$cmd";
+
+        if (!class_exists($class)) {
             throw new IllegalCommandException("Class `$cmd` does not exist");
         }
 
-        $command = new $cmd();
-        if (!$command instanceof \AbstractCommand) {
+        $command = new $class();
+        if (!$command instanceof \Education\Command\AbstractCommand) {
             throw new IllegalCommandException("`$cmd` is not a Command");
         }
         return $command;

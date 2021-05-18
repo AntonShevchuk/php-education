@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @link https://anton.shevchuk.name/php/php-for-beginners-include-files/
+ */
+
+?>
+
 Include PHP files
 <ul>
     <li>
@@ -13,7 +21,7 @@ Include PHP files
         <a href="/display/include/require">Difference between <code>require</code> and <code>require_once</code></a>
     </li>
     <li>
-        <a href="/include/append">Append and prepend directives</a>
+        <a href="/include/append">Append and prepend directives</a> (for Apache)
     </li>
     <li>
         <a href="/display/include/config">Use <code>return</code> in files</a>
@@ -28,6 +36,6 @@ Include PHP files
         <a href="/include/injection.php">PHP injection</a>
     </li>
     <li>
-        <a href="/include/basedir.php">Apply <code>open_basedir</code> directive</a>
+        <a href="/display/include/basedir">Apply <code>open_basedir</code> directive</a>
     </li>
 </ul>

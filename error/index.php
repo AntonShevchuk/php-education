@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @link https://anton.shevchuk.name/php/php-for-beginners-error-handling/
+ */
+
+?>
+
 Error handling
 <ul>
     <li>

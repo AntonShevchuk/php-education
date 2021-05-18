@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @link https://anton.shevchuk.name/php/php-for-beginners-error-handling/
+ */
+
+?>
+
 Error handling with Exceptions
 <ul>
     <li>
@@ -25,6 +33,6 @@ Error handling with Exceptions
         <a href="/display/exception/assert">Asserts in PHP</a>
     </li>
     <li>
-        <a href="/display/exception/tdd">Asserts and TDD</a>
+        <a href="/display/exception/tdd">Asserts and TDD</a> (deprecated)
     </li>
 </ul>

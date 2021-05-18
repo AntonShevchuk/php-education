@@ -42,7 +42,7 @@ $timeEnd = microtime(true);
 $secondTime = $timeEnd - $timeStart;
 $secondMemory = $memEnd - $memStart;
 
-echo  '<h3>second run</h3>';
+echo '<h3>second run</h3>';
 echo '<pre>';
 printf('%f seconds <br/>', $secondTime);
 echo number_format($secondMemory, 0, '.', ' '), ' bytes<br/>';
@@ -51,7 +51,7 @@ echo '</pre>';
 #
 # Diff
 #
-echo  '<h3>diff</h3>';
+echo '<h3>diff</h3>';
 echo '<pre>';
 printf('%f seconds <br/>', $secondTime - $firstTime);
 echo number_format($secondMemory - $firstMemory, 0, '.', ' '), ' bytes<br/>';

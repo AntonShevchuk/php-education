@@ -1,12 +1,16 @@
 <?php
-function example() {
+
+function example()
+{
     echo '<pre>';
     debug_print_backtrace();
     echo '</pre>';
 }
 
-class ExampleClass {
-    public static function method () {
+class ExampleClass
+{
+    public static function method()
+    {
         example();
     }
 }

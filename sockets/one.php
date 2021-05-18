@@ -1,5 +1,6 @@
 #!/usr/local/bin/php -q
 <?php
+
 /**
  * @link http://php.net/manual/en/sockets.examples.php
  */
@@ -91,4 +92,3 @@ do {
     socket_close($client);
 } while (true);
 socket_close($socket);
-?>

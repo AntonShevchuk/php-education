@@ -1,4 +1,5 @@
 <?php
+
 $file = $_GET['file'] ?? die('Wrong filename');
 list($dir, $file) = preg_split('[\/]', $file, 2);
 
@@ -36,10 +37,12 @@ ob_end_clean();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Examples of code</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
+          integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous"/>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha256-uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=" crossorigin="anonymous" />
-   <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+          integrity="sha256-uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=" crossorigin="anonymous"/>
+    <style>
         .panel-body code {
             display: block;
             padding: 8px;
@@ -54,7 +57,8 @@ ob_end_clean();
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#examples-navbar" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#examples-navbar"
+                    aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -67,9 +71,11 @@ ob_end_clean();
         <div class="collapse navbar-collapse" id="examples-navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">List of examples <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">List of examples <span class="caret"></span></a>
                     <ul class="dropdown-menu list-group">
-                        <?php include 'template/menu.php'; ?>
+                        <?php
+                        include 'template/menu.php'; ?>
                     </ul>
                 </li>
             </ul>
@@ -81,13 +87,13 @@ ob_end_clean();
         <div class="panel-heading">
             <h3 class="panel-title">
                 Code
-                <a class="btn btn-default btn-xs pull-right" href="/<?=$file?>" role="button">
+                <a class="btn btn-default btn-xs pull-right" href="/<?= $file ?>" role="button">
                     <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                 </a>
             </h3>
         </div>
         <div class="panel-body">
-            <?=$code?>
+            <?= $code ?>
         </div>
     </div>
 
@@ -97,20 +103,22 @@ ob_end_clean();
             <a href=""></a>
         </div>
         <div class="panel-body">
-            <?=$result?>
+            <?= $result ?>
         </div>
     </div>
 </div>
 <div class="container">
-  <footer class="row text-center text-muted">
-      © 2016 - <?= date('Y') ?> <a href="http://www.nixsolutions.com/">NIX Solutions Ltd</a><br/>
-      © 2016 - <?= date('Y') ?> <a href="http://anton.shevchuk.name/">Anton Shevchuk</a>
-  </footer>
+    <footer class="row text-center text-muted">
+        © 2016 - <?= date('Y') ?> <a href="https://www.nixsolutions.com/">NIX</a><br/>
+        © 2016 - <?= date('Y') ?> <a href="https://anton.shevchuk.name/">Anton Shevchuk</a>
+    </footer>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 </body>
 </html>
 

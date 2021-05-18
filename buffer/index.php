@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @link https://anton.shevchuk.name/php/php-for-beginners-output-buffer/
+ */
+
+?>
+
 Output Buffer
 <ul>
     <li>
@@ -21,7 +29,7 @@ Output Buffer
     <li>
         <a href="/buffer/flush.php">Flush it</a>!
         <a href="/buffer/flush2.php">Again</a>, <a href="/buffer/flush3.php">again</a>
-        and  <a href="/buffer/flush-fill.php">again</a>!
+        and <a href="/buffer/flush-fill.php">again</a>!
     </li>
     <li>
         <a href="/buffer/template.php">Template Engine</a>

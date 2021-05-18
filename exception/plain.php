@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -21,11 +22,12 @@ try {
     $helper->runCommand();
 } catch (\Exception $e) {
     echo get_class($e) . '</br>';
-    echo $e->getMessage();
+    echo $e->getMessage() . '<br/>';
     if ($e = $e->getPrevious()) {
         echo '<hr/>';
         echo get_class($e) . '</br>';
-        echo $e->getMessage();
+        echo $e->getMessage() . '<br/>';
     }
+    echo 'Try "ping" command: <a href="/exception/plain.php?cmd=ping">/exception/plain.php?cmd=ping</a>';
     exit();
 }

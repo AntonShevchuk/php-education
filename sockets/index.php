@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @todo Article or video
+ */
+
+?>
+
 Sockets and network
 <ul>
     <li>

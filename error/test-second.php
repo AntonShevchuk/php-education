@@ -5,7 +5,7 @@
 
 // сохраняем параметры памяти и времени выполнения скрипта
 $memory = memory_get_usage();
-$time= microtime(true);
+$time = microtime(true);
 
 $a = '';
 $arr = [];

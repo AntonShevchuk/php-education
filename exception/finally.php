@@ -1,6 +1,6 @@
 <?php
-try {
 
+try {
     // connect to DB
     $handler = mysqli_connect('localhost', 'root', '', 'test');
 

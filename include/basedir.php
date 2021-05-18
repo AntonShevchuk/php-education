@@ -1,9 +1,12 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 ini_set('open_basedir', __DIR__);
 
-include 'echo.php'; // OK
+echo '<h2>✅ OK</h2>';
+include 'echo.php';
 
-include '../phpinfo.php'; // WARNING
+echo '<h2>⚠️ Warning</h2>';
+include '../phpinfo.php';

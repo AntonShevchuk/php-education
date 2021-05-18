@@ -1,5 +1,6 @@
 #!/usr/local/bin/php -q
 <?php
+
 /**
  * @link http://php.net/manual/en/sockets.examples.php
  */
@@ -90,9 +91,8 @@ do {
 
         // send to the client a welcome message
         $msg = "Welcome to the PHP Test Server!\r\n" .
-            "There are ".(count($clients) - 1)." client(s) connected to the server\r\n" .
-            "Your client ID: {$key} \r\n"
-        ;
+            "There are " . (count($clients) - 1) . " client(s) connected to the server\r\n" .
+            "Your client ID: {$key} \r\n";
         socket_write($client, $msg, strlen($msg));
 
         // log message to server console
@@ -125,7 +125,6 @@ do {
 
         // check if there is any data after trimming off the spaces
         if (!empty($data)) {
-
             // client UID
             $key = array_search($readClient, $clients, false);
 
@@ -144,12 +143,9 @@ do {
 
                 // write the message to the client -- add a newline character to the end of the message
                 socket_write($sendClient, $msg);
-
             } // end of broadcast foreach
         }
     }
-
 } while (true);
 
 socket_close($socket);
-?>

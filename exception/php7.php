@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Error handling in PHP7
  */
@@ -13,9 +14,12 @@ try {
 }
 
 try {
-    (function(int $one, int $two) {
+    (function (int $one, int $two) {
         return;
-    })('one', 'two');
+    })(
+        'one',
+        'two'
+    );
 } catch (TypeError $e) {
     echo '<h2>Type Error</h2>';
     echo '<pre>';

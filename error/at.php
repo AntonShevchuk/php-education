@@ -1,8 +1,10 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-function myHandler($level, $message) {
+function myHandler($level, $message) : bool
+{
     if (error_reporting()) {
         echo "<h2>$message</h2>";
         return true;

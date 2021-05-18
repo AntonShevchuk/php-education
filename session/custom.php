@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -12,4 +13,4 @@ if (isset($_SESS['id'])) {
     $_SESS['id'] = 42;
 }
 
-// reload page
+// Press F5 for reload page

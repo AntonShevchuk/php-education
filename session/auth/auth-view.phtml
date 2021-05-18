@@ -1,14 +1,18 @@
-<?php if ($auth->isAuth()) : ?>
+<?php
+
+if ($auth->isAuth()) : ?>
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title">You are logged in as <b><?=$auth->getLogin()?></h3>
+            <h3 class="panel-title">You are logged in as <b><?= $auth->getLogin() ?></h3>
         </div>
         <div class="panel-body">
             Click for <a href="/display/session/auth/logout">logout</a>
         </div>
     </div>
-    <?php return; ?>
-<?php endif; ?>
+    <?php
+    return; ?>
+<?php
+endif; ?>
 
 <div class="container">
     <div class="row">
@@ -16,20 +20,23 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Sign in</h3>
-                    <?php if ($auth->error) : ?>
+                    <?php
+                    if ($auth->error) : ?>
                         <h2> Login or password are wrong!</h2>
-                    <?php endif; ?>
+                    <?php
+                    endif; ?>
                 </div>
                 <div class="panel-body">
                     <form action="" method="post">
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input type="text" name="login" class="form-control" value="" placeholder="login" maxlength="255" required />
+                            <input type="text" name="login" class="form-control" value="" placeholder="login"
+                                   maxlength="255" required/>
                         </div>
 
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                            <input type="password" name="pass" class="form-control" placeholder="password" required />
+                            <input type="password" name="pass" class="form-control" placeholder="password" required/>
                         </div>
                         <input type="submit" value="Sign In" class="btn btn-primary"/>
 
@@ -45,9 +52,9 @@
                 <div class="panel-body">
                     <dl>
                         <dt>login</dt>
-                        <dd><?=$auth->login?></dd>
+                        <dd><?= $auth->login ?></dd>
                         <dt>password</dt>
-                        <dd><?=$auth->pass?></dd>
+                        <dd><?= $auth->pass ?></dd>
                     </dl>
                 </div>
             </div>

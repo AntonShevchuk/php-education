@@ -1,5 +1,6 @@
 #!/usr/local/bin/php -q
 <?php
+
 /**
  * @link http://php.net/manual/en/function.stream-socket-server.php
  * @link https://habrahabr.ru/post/209864/
@@ -68,7 +69,7 @@ while (true) {
         // read HTTP request
         $request = '';
         while ($buffer = rtrim(fgets($connect))) {
-            $request .= "\t".$buffer."\n";
+            $request .= "\t" . $buffer . "\n";
         }
         echo "received:\n";
         echo $request;
@@ -95,4 +96,3 @@ while (true) {
 }
 
 fclose($server);
-?>

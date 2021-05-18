@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @namespace
+ */
+
+namespace Education\Command;
+
 /**
  * Ping
  *

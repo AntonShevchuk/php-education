@@ -1,10 +1,13 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // disable output buffering
 if (ini_get('output_buffering')) {
-    while (ob_get_level()) ob_end_flush();
+    while (ob_get_level()) {
+        ob_end_flush();
+    }
 }
 
 // start

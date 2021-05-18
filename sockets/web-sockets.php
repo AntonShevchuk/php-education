@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 /**
  * Web-Sockets
  *
@@ -99,23 +100,6 @@ while (true) {
             $key = array_search($client, $clients, false);
 
             broadcast($clients, "<strong>user #{$key}</strong>: $message");
-        }
-    }
-}
-
-function broadcast($clients, $message) {
-    // create a copy, so $clients doesn't get modified by stream_select()
-    $write = $clients;
-    // no more sockets for monitoring
-    $read = $except = null;
-
-    array_shift($write);
-
-    $message = encode(strip_tags($message));
-
-    if (stream_select($read, $write, $except, 0)) {
-        foreach ($write as $client) {
-            @fwrite($client, $message);
         }
     }
 }

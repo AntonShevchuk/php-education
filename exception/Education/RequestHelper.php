@@ -1,7 +1,9 @@
 <?php
+
 /**
  * @namespace
  */
+
 namespace Education;
 
 use Education\Exception\EducationException;
@@ -16,7 +18,7 @@ use Education\Exception\IllegalCommandException;
 class RequestHelper
 {
     private $request = array();
-    private $default= 'DefaultCommand';
+    private $default = 'DefaultCommand';
     private $command;
 
     /**

@@ -1,6 +1,7 @@
 <?php
+
 try {
-    if (random_int(0,1)) {
+    if (random_int(0, 1)) {
         throw new Exception('One');
     }
     echo 'Zero';

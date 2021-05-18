@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Web-Sockets Handshake
  *
@@ -144,7 +145,7 @@ function decode($data)
 /**
  * @param        $payload
  * @param string $type
- * @param bool   $masked
+ * @param bool $masked
  *
  * @return array|string
  * @throws Exception
@@ -214,4 +215,27 @@ function encode($payload, $type = 'text', $masked = false)
     }
 
     return $frame;
+}
+
+/**
+ * @param $clients
+ * @param $message
+ * @throws Exception
+ */
+function broadcast($clients, $message)
+{
+    // create a copy, so $clients doesn't get modified by stream_select()
+    $write = $clients;
+    // no more sockets for monitoring
+    $read = $except = null;
+
+    array_shift($write);
+
+    $message = encode(strip_tags($message));
+
+    if (stream_select($read, $write, $except, 0)) {
+        foreach ($write as $client) {
+            @fwrite($client, $message);
+        }
+    }
 }

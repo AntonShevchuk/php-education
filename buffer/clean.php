@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -12,4 +13,4 @@ echo 'world';
 $b = ob_get_contents();
 ob_end_clean();
 
-echo $a .' '. $b;
+echo $a . ' ' . $b;

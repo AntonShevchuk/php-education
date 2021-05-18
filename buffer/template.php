@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -14,12 +15,13 @@ try {
 echo $header, $content, $footer;
 
 /**
- * @param  string $template
- * @param  array $vars
+ * @param string $template
+ * @param array $vars
  * @return string
  * @throws InvalidArgumentException
  */
-function template($template, $vars) {
+function template($template, $vars)
+{
     ob_start();
     if (in_array('template', $vars, true)) {
         throw new InvalidArgumentException('Variable name `template` is reserved');
